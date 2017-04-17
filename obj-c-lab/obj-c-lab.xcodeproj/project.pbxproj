@@ -35,6 +35,7 @@
 		71D826651EA56B4400973A96 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		71D826671EA56C0500973A96 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		71D826681EA56C0500973A96 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		71D8266A1EA576CF00973A96 /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 				71D826641EA56B4400973A96 /* Person.h */,
 				71D826671EA56C0500973A96 /* Employee.h */,
 				71D826681EA56C0500973A96 /* Employee.m */,
+				71D8266A1EA576CF00973A96 /* PersonQueue.h */,
 				71D826651EA56B4400973A96 /* Person.m */,
 				71D8264D1EA5615000973A96 /* AppDelegate.h */,
 				71D8264E1EA5615000973A96 /* AppDelegate.m */,
