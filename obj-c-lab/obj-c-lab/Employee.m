@@ -9,5 +9,34 @@
 #import "Employee.h"
 
 @implementation Employee
+NSNumber *_employeeNumber;
+NSNumber *_yearsEmployed;
+NSString *_managerName;
+
+//Getter
+-(NSNumber *)employeeNumber{
+    return _employeeNumber;
+}
+
+-(NSNumber *)yearsEmployed{
+    return _yearsEmployed;
+}
+
+-(NSString *)managerName{
+    return _managerName;
+}
+
+//Setter
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber {
+    _employeeNumber = employeeNumber;
+}
+
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed {
+    _yearsEmployed = yearsEmployed;
+}
+
+-(void)setManagerName:(NSString *)managerName {
+    _managerName = managerName;
+}
 
 @end

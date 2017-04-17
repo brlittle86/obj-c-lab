@@ -10,8 +10,8 @@
 
 @interface Employee : Person
 
-@property(strong, nonatomic) NSNumber *employeeNumber;
-@property(strong, nonatomic) NSNumber *yearsEmployed;
-@property(strong, nonatomic) NSString *managerName;
+//@property(strong, nonatomic) NSNumber *employeeNumber;
+//@property(strong, nonatomic) NSNumber *yearsEmployed;
+//@property(strong, nonatomic) NSString *managerName;
 
 @end
