@@ -20,6 +20,8 @@
     
     NSString *sampleString = @"I like potatoes.";
     
+    NSArray *sampleArray = [sampleString toArray];
+    NSLog(@"%@", sampleArray);
     [sampleString reversedString];
     
 }

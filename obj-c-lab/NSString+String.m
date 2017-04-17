@@ -11,7 +11,7 @@
 @implementation NSString (String)
 
 -(NSArray *)toArray{
-    return [self componentsSeparatedByString:@""];
+    return [self componentsSeparatedByString:@" "];
 }
 
 -(NSString *)reversedString{
