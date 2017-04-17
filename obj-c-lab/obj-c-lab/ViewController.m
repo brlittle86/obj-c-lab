@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *sampleString = @"I like potatoes.";
+    NSString *sampleString = @"I like potatoes";
     
     NSArray *sampleArray = [sampleString toArray];
     NSLog(@"%@", sampleArray);
