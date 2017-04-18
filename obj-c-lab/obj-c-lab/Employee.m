@@ -17,6 +17,7 @@ NSString *_managerName;
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
+                           email:(NSString *)email
                    yearsEmployed:(NSNumber *)yearsEmployed
                       andManager:(NSString *)managerName{
     

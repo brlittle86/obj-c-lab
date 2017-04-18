@@ -22,7 +22,7 @@
     
     [[EmployeeDatabase shared] allEmployees];
     
-    Employee *original = [[Employee alloc]initWithFirstName:@"Brandon" lastName:@"Little" age:@30 yearsEmployed:@1 andManager:@"Eve"];
+    Employee *original = [[Employee alloc]initWithFirstName:@"Brandon" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
     
     Employee *newInstructor = [original copy];
     
