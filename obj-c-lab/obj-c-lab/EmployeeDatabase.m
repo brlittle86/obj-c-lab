@@ -43,6 +43,9 @@
 
 
 -(void)add:(Employee *)employee{
+    if ([_employees count] == 0) {
+        _employees = [[NSMutableArray alloc]init];
+    }
     [_employees addObject:employee];
 }
 

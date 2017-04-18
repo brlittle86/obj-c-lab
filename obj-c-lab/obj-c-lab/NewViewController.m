@@ -20,7 +20,15 @@
 @implementation NewViewController
 
 - (void)viewDidLoad {
+    
+    if ([_allEmployees count] == 0) {
+        _allEmployees = [[NSMutableArray alloc]init];
+    }
     [super viewDidLoad];
+    
+    Employee *original = [[Employee alloc]initWithFirstName:@"Brandon" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
+    
+    [[EmployeeDatabase shared] add: original];
     
     self.table.delegate = self;
     self.table.dataSource = self;
