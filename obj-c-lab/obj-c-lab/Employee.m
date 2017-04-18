@@ -26,6 +26,7 @@ NSString *_managerName;
     if (self){
         _yearsEmployed = yearsEmployed;
         _managerName = managerName;
+        _email = email;
         _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
     }
     
@@ -40,6 +41,7 @@ NSString *_managerName;
     employee.employeeNumber = self.employeeNumber;
     employee.managerName = self.managerName;
     employee.yearsEmployed = self.yearsEmployed;
+    employee.email = self.email;
     
     return employee;
     
