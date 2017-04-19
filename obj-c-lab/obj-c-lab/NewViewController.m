@@ -13,7 +13,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
-@property (strong,nonatomic) NSMutableArray *allEmployees;
 
 @end
 
@@ -21,28 +20,14 @@
 
 - (void)viewDidLoad {
     
-    if ([_allEmployees count] == 0) {
-        _allEmployees = [[NSMutableArray alloc]init];
-    }
     [super viewDidLoad];
     
-//    Employee *original = [[Employee alloc]initWithFirstName:@"Dave" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
-//    
-//    [[EmployeeDatabase shared] add: original];
-    
-    self.table.delegate = self;
     self.table.dataSource = self;
-    
-    [_allEmployees addObjectsFromArray:[[EmployeeDatabase shared] allEmployees]];
-//
-//    [self.table reloadData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"reloadData" object:nil];
 }
 
 -(void)reloadView{
-    [_allEmployees removeAllObjects];
-    [_allEmployees addObjectsFromArray:[[EmployeeDatabase shared] allEmployees]];
     [self.table reloadData];
 }
 
@@ -53,12 +38,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    cell.textLabel.text = [_allEmployees[indexPath.row] firstName];
+    cell.textLabel.text = [[[EmployeeDatabase shared] employeeAtIndex:(int)indexPath.row] firstName];
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.allEmployees.count;
+    return [[EmployeeDatabase shared] count];
 }
 
 @end
