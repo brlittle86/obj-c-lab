@@ -18,6 +18,7 @@
 		71D826691EA56C0500973A96 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D826681EA56C0500973A96 /* Employee.m */; };
 		71D8266D1EA6876B00973A96 /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8266C1EA6876B00973A96 /* EmployeeDatabase.m */; };
 		71D826731EA6C36800973A96 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D826721EA6C36800973A96 /* NewViewController.m */; };
+		71D826761EA7FA3400973A96 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D826751EA7FA3400973A96 /* AddEmployeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		71D8266C1EA6876B00973A96 /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
 		71D826711EA6C36800973A96 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		71D826721EA6C36800973A96 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		71D826741EA7FA3400973A96 /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
+		71D826751EA7FA3400973A96 /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				71D826511EA5615000973A96 /* ViewController.m */,
 				71D826711EA6C36800973A96 /* NewViewController.h */,
 				71D826721EA6C36800973A96 /* NewViewController.m */,
+				71D826741EA7FA3400973A96 /* AddEmployeeViewController.h */,
+				71D826751EA7FA3400973A96 /* AddEmployeeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				71D8264C1EA5615000973A96 /* main.m in Sources */,
 				71D8266D1EA6876B00973A96 /* EmployeeDatabase.m in Sources */,
 				71D826731EA6C36800973A96 /* NewViewController.m in Sources */,
+				71D826761EA7FA3400973A96 /* AddEmployeeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

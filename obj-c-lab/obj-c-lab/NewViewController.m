@@ -26,14 +26,24 @@
     }
     [super viewDidLoad];
     
-    Employee *original = [[Employee alloc]initWithFirstName:@"Dave" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
-    
-    [[EmployeeDatabase shared] add: original];
+//    Employee *original = [[Employee alloc]initWithFirstName:@"Dave" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
+//    
+//    [[EmployeeDatabase shared] add: original];
     
     self.table.delegate = self;
     self.table.dataSource = self;
     
     [_allEmployees addObjectsFromArray:[[EmployeeDatabase shared] allEmployees]];
+//
+//    [self.table reloadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"reloadData" object:nil];
+}
+
+-(void)reloadView{
+    [_allEmployees removeAllObjects];
+    [_allEmployees addObjectsFromArray:[[EmployeeDatabase shared] allEmployees]];
+    [self.table reloadData];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
