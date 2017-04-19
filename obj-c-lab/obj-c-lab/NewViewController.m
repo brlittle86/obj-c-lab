@@ -26,7 +26,7 @@
     }
     [super viewDidLoad];
     
-    Employee *original = [[Employee alloc]initWithFirstName:@"Brandon" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
+    Employee *original = [[Employee alloc]initWithFirstName:@"Dave" lastName:@"Little" age:@30 email:@"brlittle86@gmail.com" yearsEmployed:@1 andManager:@"Eve"];
     
     [[EmployeeDatabase shared] add: original];
     
