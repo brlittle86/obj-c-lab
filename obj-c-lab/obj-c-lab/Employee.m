@@ -125,4 +125,16 @@ NSString *_managerName;
     }
 }
 
+-(void)setEmail:(NSString *)email {
+    
+    if (_email != email) {
+        
+        [email retain];
+        [_email release];
+        
+        _email = email;
+        
+    }
+}
+
 @end
