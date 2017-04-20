@@ -15,7 +15,7 @@
 }
 
 -(NSString *)reversedString{
-    NSMutableString *reversedString = [NSMutableString string];
+    NSMutableString *reversedString = [[NSMutableString alloc]init];
     NSInteger charIndex = [self length];
     while (charIndex > 0) {
         charIndex--;
