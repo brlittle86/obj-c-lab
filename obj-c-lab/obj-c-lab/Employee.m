@@ -93,15 +93,48 @@ NSString *_managerName;
 
 //Setter
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber {
-    _employeeNumber = employeeNumber;
+    
+    if (_employeeNumber != employeeNumber) {
+        
+        [employeeNumber retain];
+        [_employeeNumber release];
+        
+        _employeeNumber = employeeNumber;
+    }
 }
 
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed {
-    _yearsEmployed = yearsEmployed;
+    
+    if (_yearsEmployed != yearsEmployed) {
+        
+        [yearsEmployed retain];
+        [_yearsEmployed release];
+        
+        _yearsEmployed = yearsEmployed;
+    }
 }
 
 -(void)setManagerName:(NSString *)managerName {
-    _managerName = managerName;
+    
+    if (_managerName != managerName) {
+        
+        [managerName retain];
+        [_managerName release];
+        
+        _managerName = managerName;
+    }
+}
+
+-(void)setEmail:(NSString *)email {
+    
+    if (_email != email) {
+        
+        [email retain];
+        [_email release];
+        
+        _email = email;
+        
+    }
 }
 
 @end
