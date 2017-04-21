@@ -8,10 +8,13 @@
 
 #import "NewViewController.h"
 #import "EmployeeDatabase.h"
+#import "MeaninglessCounter.h"
+
+static void *kvoContext = &kvoContext;
 
 @interface NewViewController () <UITableViewDelegate,UITableViewDataSource>
 
-
+@property (strong, nonatomic) MeaninglessCounter *meaninglessCounter;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
@@ -24,7 +27,42 @@
     
     self.table.dataSource = self;
     
+    self.meaninglessCounter = [[MeaninglessCounter alloc]init];
+    
+    [self setValue:@25 forKeyPath:@"meaninglessCounter.meaninglessCount"];
+    
+    NSLog(@"%i", (int)self.meaninglessCounter.meaninglessCount);
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"reloadData" object:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self addObserver:self forKeyPath:@"self.meaninglessCounter.meaninglessCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:kvoContext];
+    
+    [self.meaninglessCounter incrementMeaninglessCounter];
+    
+    [self.meaninglessCounter incrementMeaninglessCounter];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [self removeObserver:self forKeyPath:@"self.meaninglessCounter.meaninglessCount"];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    
+    if (context == kvoContext) {
+        
+        NSLog(@"Meaningless counter is now: %i", (int)self.meaninglessCounter.meaninglessCount);
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+    
 }
 
 -(void)reloadView{
